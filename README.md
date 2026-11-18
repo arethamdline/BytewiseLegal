@@ -15,12 +15,16 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000/`, `/privacy`, and `/data-deletion`.
 
-## Vercel setup
+## Netlify setup
 
-Import the `bytewise-meta-legal` repository into the authorized Vercel account,
-set the project Root Directory to `site`, choose the **Other** framework preset,
-and leave the build command empty. The site consists of plain HTML and CSS.
-Configure a custom domain only after legal review and approval of every item in
+Import the `arethamdline/BytewiseLegal` repository into Netlify. The
+[`netlify.toml`](./netlify.toml) configuration sets `site` as the publish
+directory; no build command or dependencies are needed. If configuring the
+project in the Netlify UI, leave the base directory and build command empty and
+set the publish directory to `site`.
+
+The public pages are `/`, `/privacy/`, and `/data-deletion/`. Configure a custom
+domain only after legal review and approval of every item in
 [`REVIEW_REQUIRED.md`](./REVIEW_REQUIRED.md).
 
 Do not publish this draft until the unresolved factual, operational, and legal
